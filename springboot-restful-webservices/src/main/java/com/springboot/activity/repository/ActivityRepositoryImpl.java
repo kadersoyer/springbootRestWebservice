@@ -18,7 +18,7 @@ public class ActivityRepositoryImpl implements ActivityRepository {
       
         activityEntityList = activityEntityList.stream().filter(
             activityEntity -> activityEntity
-                .getRequestTime().after(new Timestamp(System.currentTimeMillis() - ( 60 * 1000)))).collect(
+                .getRequestTime().after(new Timestamp(System.currentTimeMillis() - (12 * 60 * 60 * 1000)))).collect(
             Collectors.toList());
         
         Integer total= activityEntityList
